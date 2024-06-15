@@ -1,0 +1,42 @@
+Dijkstra's Algorithm
+--------------------
+
+1. All nodes are marked as unvisited in an empty list:
+
+    - Create an array that stores all nodes as infinite distance (no initial path)
+    - Update this array with the starting node which has distance 0
+    - During the algorithm, distance of node N is length of the shortest path so far
+
+2. From unvisited set, select current node to be one with smallest finite distance:
+
+    - Initially the starting node (distance 0)
+    - If empty or only contains nodes with INF distance (unreachable), terminate (step 6)
+        + Emulate this by not adding notes with INF distance to the PQ
+    - Can terminate if the current node is the target node
+
+3. For current node, consider all unvisited neighbours update distances through current:
+
+    - Compare newly calculated distance to one assigned to the neighbor
+    - Assign smaller
+
+    Example:
+    ========
+    | If current node A is marked distance 6, the edge connecting it with its neighbour
+    | B has length 2, then distance to B through A is 6 + 2 = 8.
+    | If B was previously makred with distance > 8, update it to 8 (the path through A 
+    | is shorter).
+    | Otherwise, keep its current distance (the path to B is not the shortest).
+
+4. When finished considering all unvisited neighbors of current node:
+
+    - Mark current node as visited and remove from unvisited set
+    - This is so node is never checked again
+    - This is because distance is minial (as ensured by step 2), therefore final
+    - Go back to step 2
+
+5. Once the loop exits, every visited node contains shortest distance from start:
+
+    - To obtain path to a node, begin with this node
+    - Repeatedly pick its incoming neighbor with shortest distance
+    - Do this until starting node is reached
+    - This is the path

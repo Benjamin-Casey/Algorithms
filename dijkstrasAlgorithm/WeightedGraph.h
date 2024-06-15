@@ -19,6 +19,8 @@ public:
 
     // Print the graph representation
     void printGraph();
+
+    void dijkstrasAlgorithm(int startingNode, int targetNode);
 };
 
 #endif
