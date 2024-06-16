@@ -11,7 +11,7 @@ int main() {
 
     g.printGraph();
 
-    std::cout << "Dijkstras output: " << g.dijkstrasAlgorithm(0, 3) << '\n';
+    g.dijkstrasAlgorithm(0, 3);
 
     return 0;
 }
