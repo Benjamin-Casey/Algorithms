@@ -1,0 +1,33 @@
+Adjancency list of vertex 0
+	1 -> (10)
+	2 -> (20)
+
+Adjancency list of vertex 1
+	0 -> (10)
+	2 -> (30)
+
+Adjancency list of vertex 2
+	0 -> (20)
+	1 -> (30)
+	3 -> (40)
+
+Adjancency list of vertex 3
+	2 -> (40)
+	4 -> (10)
+	5 -> (10)
+
+Adjancency list of vertex 4
+	3 -> (10)
+	5 -> (60)
+
+Adjancency list of vertex 5
+	3 -> (10)
+	4 -> (60)
+
+Dijkstras output from node 0 to 5
+	0 -> 0
+	1 -> 10
+	2 -> 20
+	3 -> 60
+	4 -> 70
+	5 -> 70
